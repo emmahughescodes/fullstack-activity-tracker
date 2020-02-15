@@ -1,23 +1,28 @@
 {
-  "name": "book-party-code-along",
+  "name": "library-book-review",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "init": "node scripts/init.js",
+    "deploy": "node api/server.js",
+    "build": "npm run build:client",
     "test": "react-scripts test",
-    "start:server": "nodemon api/server.js --ignore client",
+    "start:server": "nodemon api/server.js --ignore src/ --ignore build/ --ignore public/",
     "start:client": "react-scripts start",
-    "build:client": "react-scripts build"
+    "build:client": "react-scripts build",
+    "git": "node scripts/git.js emmahughescodes fullstack-activity-tracker"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmahughescodes/fullstack-activity-tracker.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/HackerYou/con-ed-full-stack/issues"
   },
-  "homepage": "https://github.com/HackerYou/con-ed-full-stack#readme",
+  "homepage": "https://https://emma-hughes-library.herokuapp.com/",
   "dependencies": {
     "@material-ui/core": "^4.7.0",
     "@material-ui/icons": "^4.5.1",
